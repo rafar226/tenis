@@ -1,0 +1,11 @@
+{
+  "name": "Neón Pong",
+  "short_name": "Neón Pong",
+  "description": "Tenis de mesa arcade para uno o dos jugadores.",
+  "start_url": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#050b12",
+  "theme_color": "#08131f",
+  "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
