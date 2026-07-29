@@ -20,22 +20,29 @@
       </header>
 
       <section class="games" aria-label="Juegos disponibles">
-        <a class="game-card pong" href="./pong.html">
+        <a class="game-card pong" href="./pong/">
           <span class="number">01</span>
           <div class="preview" aria-hidden="true"><i class="paddle left"></i><i class="ball"></i><i class="paddle right"></i></div>
           <div class="info"><small>1–2 JUGADORES</small><h2>NEÓN <em>PONG</em></h2><p>Deslizá. Golpeá. Ganá.</p></div>
           <b>JUGAR <span>→</span></b>
         </a>
 
-        <a class="game-card snake" href="./snake.html">
+        <a class="game-card snake" href="./snake/">
           <span class="number">02</span>
           <div class="preview" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><strong></strong></div>
           <div class="info"><small>1–2 JUGADORES</small><h2>NEÓN <em>SNAKE</em></h2><p>Deslizá. Crecé. Sobreviví.</p></div>
           <b>JUGAR <span>→</span></b>
         </a>
+
+        <a class="game-card bubble" href="./bubble/">
+          <span class="number">03</span>
+          <div class="preview" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><strong></strong></div>
+          <div class="info"><small>1 JUGADOR</small><h2>NEÓN <em>BUBBLE</em></h2><p>Apuntá. Combiná. Explotá.</p></div>
+          <b>JUGAR <span>→</span></b>
+        </a>
       </section>
 
-      <footer><span>2 JUEGOS DISPONIBLES</span><i></i><span>FUNCIONA SIN CONEXIÓN</span></footer>
+      <footer><span>3 JUEGOS DISPONIBLES</span><i></i><span>FUNCIONA SIN CONEXIÓN</span></footer>
     </main>
     <script>if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));</script>
   </body>

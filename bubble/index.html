@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#120b22" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Neón Bubble</title>
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="icon" href="../icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./bubble.css" />
+  <link rel="stylesheet" href="./effects.css" />
+</head>
+<body>
+  <main id="bubbleApp">
+    <canvas id="game" aria-label="Tablero de Bubble Shooter"></canvas>
+    <header class="hud">
+      <a href="../index.html" aria-label="Todos los juegos">‹</a>
+      <div><small>PUNTOS</small><strong id="score">0</strong></div>
+      <div><small>RÉCORD</small><strong id="best">0</strong></div>
+      <div class="miss-box"><small>FALLOS</small><strong id="misses">0/5</strong></div>
+      <button id="pause" aria-label="Pausar">Ⅱ</button>
+    </header>
+    <section id="menu" class="screen visible">
+      <a class="back" href="../index.html">‹ TODOS LOS JUEGOS</a>
+      <div class="kicker"><span></span> ARCADE DE MESA</div>
+      <h1>NEÓN<br><em>BUBBLE</em></h1>
+      <p>Apuntá. Combiná. Explotá.</p>
+      <button id="start" class="primary"><b>JUGAR</b><small>Uní 3 burbujas del mismo color</small></button>
+      <div class="help">ARRASTRÁ PARA APUNTAR · SOLTÁ PARA DISPARAR</div>
+    </section>
+    <section id="dialog" class="screen dialog">
+      <p id="eyebrow">PARTIDA EN PAUSA</p><h2 id="title">Pausa</h2><p id="result"></p>
+      <button id="resume" class="primary"><b>CONTINUAR</b></button>
+      <button id="restart" class="plain">NUEVA PARTIDA</button>
+      <a href="../index.html" class="plain link">TODOS LOS JUEGOS</a>
+    </section>
+    <div id="hint">ARRASTRÁ Y SOLTÁ PARA DISPARAR</div>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="./bubble.js"></script>
+</body>
+</html>

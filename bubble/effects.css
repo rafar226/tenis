@@ -1,0 +1,8 @@
+.miss-box strong { color: #ff8bab; }
+.miss-box.warning strong { animation: pulse .55s infinite alternate; }
+#toast { position: absolute; z-index: 8; left: 50%; top: 48%; transform: translate(-50%,-50%) scale(.8); padding: 10px 22px; border: 1px solid rgba(113,237,255,.35); border-radius: 12px; background: rgba(7,10,22,.86); color: #7ff2ff; font-size: clamp(25px,5vw,46px); font-weight: 900; font-style: italic; letter-spacing: .06em; opacity: 0; pointer-events: none; text-align: center; text-shadow: 0 0 18px currentColor; }
+#toast.show { animation: toast .9s ease-out; }
+#toast.penalty { color: #ff6389; border-color: rgba(255,83,125,.5); }
+@keyframes toast { 0% { opacity:0; transform:translate(-50%,-40%) scale(.7) } 18% { opacity:1; transform:translate(-50%,-50%) scale(1.08) } 70% { opacity:1; transform:translate(-50%,-55%) scale(1) } 100% { opacity:0; transform:translate(-50%,-70%) scale(.9) } }
+@keyframes pulse { to { color:#ff416f; text-shadow:0 0 14px #ff416f } }
+@media (max-width:600px) { .hud { gap:18px } .hud strong { font-size:26px } .hud .miss-box { display:none } }

@@ -126,5 +126,5 @@
   document.querySelector('#soundButton').addEventListener('click', e => { soundOn = !soundOn; e.currentTarget.querySelector('b').textContent = soundOn ? 'ACTIVADO' : 'DESACTIVADO'; });
   document.addEventListener('visibilitychange', () => { if (document.hidden && running && !paused) pause(); });
   addEventListener('resize', resize); resize(); draw();
-  if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
+  if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('../sw.js'));
 })();

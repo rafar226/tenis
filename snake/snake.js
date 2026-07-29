@@ -103,5 +103,5 @@
   resume.addEventListener('click',()=>resume.dataset.action==='restart'?start():(paused=false,dialog.classList.remove('visible'),last=performance.now()));
   document.addEventListener('keydown',e=>{const map={ArrowUp:DIR.up,ArrowDown:DIR.down,ArrowLeft:DIR.left,ArrowRight:DIR.right,w:DIR.up,s:DIR.down,a:DIR.left,d:DIR.right};if(map[e.key])turn(mode==='duel'&&e.key.startsWith('Arrow')?1:0,map[e.key]);});
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&running&&!paused)pause()});addEventListener('resize',resize);resize();food={x:Math.floor(cols/2),y:Math.floor(rows/2)};draw();
-  if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
+  if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('../sw.js'));
 })();
