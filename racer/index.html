@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#080912" />
+    <title>Neón Racer</title>
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" href="../icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./racer.css" />
+  </head>
+  <body>
+    <main id="racerApp">
+      <canvas id="racerGame" aria-label="Pista de Neón Racer"></canvas>
+      <header class="hud" id="hud">
+        <a class="round" href="../index.html" aria-label="Volver al arcade">‹</a>
+        <div><small>DISTANCIA</small><strong><span id="score">0</span> m</strong></div>
+        <div><small>RÉCORD</small><strong><span id="best">0</span> m</strong></div>
+        <button class="round" id="pause" aria-label="Pausar">Ⅱ</button>
+      </header>
+
+      <section class="screen visible" id="menu">
+        <a class="back" href="../index.html">‹ TODOS LOS JUEGOS</a>
+        <div class="kicker"><i></i> CARRERA INFINITA</div>
+        <h1>NEÓN<br /><em>RACER</em></h1>
+        <p>Esquivá el tráfico. Aguantá la velocidad.</p>
+        <button class="main-button" id="start">ARRANCAR <span>→</span></button>
+        <small class="instructions">← → / A D &nbsp;·&nbsp; DESLIZÁ O TOCÁ LOS LADOS</small>
+      </section>
+
+      <section class="screen dialog" id="message">
+        <div class="kicker"><i></i> <span id="messageKicker">FIN DE CARRERA</span></div>
+        <h2 id="messageTitle">¡Choque!</h2>
+        <p id="messageText"></p>
+        <button class="main-button" id="retry">OTRA CARRERA</button>
+        <button class="plain" id="resume">CONTINUAR</button>
+        <a class="plain link" href="../index.html">VOLVER AL ARCADE</a>
+      </section>
+
+      <div class="mobile-controls" id="controls">
+        <button data-dir="-1" aria-label="Mover a la izquierda">‹</button>
+        <button data-dir="1" aria-label="Mover a la derecha">›</button>
+      </div>
+    </main>
+    <script src="./racer.js"></script>
+  </body>
+</html>

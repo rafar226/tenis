@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#090719" />
+    <title>Neón Turbo</title>
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" href="../icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./turbo.css" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game" aria-label="Juego de carreras Neón Turbo"></canvas>
+      <header class="hud" id="hud">
+        <a href="../index.html" class="round" aria-label="Volver al arcade">‹</a>
+        <div class="stat"><small>VELOCIDAD</small><strong><span id="speed">0</span></strong><b>KM/H</b></div>
+        <div class="stat distance"><small>DISTANCIA</small><strong><span id="distance">0.0</span></strong><b>KM</b></div>
+        <button class="round pause" id="pause" aria-label="Pausar">Ⅱ</button>
+      </header>
+
+      <section class="screen visible" id="menu">
+        <a href="../index.html" class="back">‹ TODOS LOS JUEGOS</a>
+        <div class="kicker"><i></i> RUTA NOCTURNA</div>
+        <h1>NEÓN<br /><em>TURBO</em></h1>
+        <p>Tomá las curvas. Pisá a fondo. No mires atrás.</p>
+        <button class="main" id="start">ENCENDER MOTOR <span>→</span></button>
+        <small class="hint">FLECHAS / WASD · ACELERÁ Y FRENÁ</small>
+      </section>
+
+      <section class="screen result" id="message">
+        <div class="kicker"><i></i> <span id="resultKicker">FIN DEL VIAJE</span></div>
+        <h2 id="resultTitle">Fuera de pista</h2>
+        <p id="resultText"></p>
+        <button class="main" id="retry">VOLVER A CORRER</button>
+        <button class="plain" id="resume">CONTINUAR</button>
+        <a class="plain link" href="../index.html">VOLVER AL ARCADE</a>
+      </section>
+
+      <div class="touch" id="touch">
+        <div class="steering">
+          <button data-control="left" aria-label="Doblar a la izquierda">‹</button>
+          <button data-control="right" aria-label="Doblar a la derecha">›</button>
+        </div>
+        <div class="pedals">
+          <button class="brake" data-control="brake"><span>FRENO</span></button>
+          <button class="gas" data-control="gas"><span>ACELERAR</span></button>
+        </div>
+      </div>
+    </main>
+    <script src="./turbo.js"></script>
+  </body>
+</html>
