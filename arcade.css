@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&display=swap');
+:root { color-scheme: dark; font-family: "Barlow Condensed", Impact, sans-serif; }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { min-height: 100%; margin: 0; background: #050711; }
+body { color: #e9fbff; background: radial-gradient(circle at 50% 0, #16243d 0, #080b18 38%, #04050c 100%); }
+.arcade { min-height: 100vh; padding: max(38px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(30px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left)); overflow: hidden; position: relative; }
+.arcade::before { content: ""; position: fixed; inset: 0; opacity: .18; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size: 36px 36px; }
+.hero, .games, footer { position: relative; z-index: 1; width: min(1120px, 100%); margin-inline: auto; }
+.hero { text-align: center; }
+.eyebrow { color: #70ebff; font-size: 13px; letter-spacing: .32em; }
+.eyebrow span { display: inline-block; width: 8px; height: 8px; margin-right: 9px; border-radius: 50%; background: #ff405f; box-shadow: 0 0 14px #ff405f; }
+h1 { margin: 4px 0 0; font-size: clamp(58px, 10vw, 110px); font-style: italic; line-height: .95; letter-spacing: -.045em; text-shadow: 0 0 34px rgba(70,220,255,.2); }
+h1 em { color: #5cecff; font-style: inherit; }
+.hero p { margin: 10px 0 30px; color: #8da7b2; font: 14px system-ui, sans-serif; letter-spacing: .08em; }
+.games { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.game-card { position: relative; min-height: 360px; padding: 24px; overflow: hidden; color: inherit; text-decoration: none; border: 1px solid rgba(119,226,244,.22); border-radius: 20px; background: linear-gradient(145deg,rgba(16,40,56,.92),rgba(6,13,22,.95)); box-shadow: 0 18px 60px rgba(0,0,0,.28); transition: transform .2s, border-color .2s; }
+.game-card:active { transform: scale(.985); }
+.game-card:hover { border-color: rgba(106,235,255,.65); transform: translateY(-3px); }
+.number { position: absolute; top: 20px; right: 22px; color: rgba(168,224,233,.25); font-size: 21px; }
+.preview { height: 150px; position: relative; margin-bottom: 18px; border-bottom: 1px solid rgba(117,220,239,.12); }
+.pong .preview::after { content: ""; position: absolute; left: 50%; top: 8px; bottom: 18px; border-left: 1px dashed rgba(113,223,242,.25); }
+.paddle { position: absolute; top: 45px; width: 8px; height: 57px; border-radius: 4px; background: #5beaff; box-shadow: 0 0 15px #31d8f5; }
+.paddle.left { left: 18%; }.paddle.right { right: 18%; top: 24px; }
+.ball { position: absolute; left: 62%; top: 70px; width: 13px; height: 13px; border-radius: 50%; background: #ff4964; box-shadow: 0 0 17px #ff4964; }
+.snake .preview i { position: absolute; width: 28px; height: 28px; border-radius: 7px; background: #70f7ba; box-shadow: 0 0 13px rgba(68,240,161,.5); top: 57px; }
+.snake .preview i:nth-child(1){left:17%}.snake .preview i:nth-child(2){left:calc(17% + 31px)}.snake .preview i:nth-child(3){left:calc(17% + 62px)}.snake .preview i:nth-child(4){left:calc(17% + 93px);top:26px}.snake .preview i:nth-child(5){left:calc(17% + 124px);top:26px}
+.snake .preview strong { position:absolute; right:20%; top:35px; width:16px; height:16px; border-radius:50%; background:#ff4964; box-shadow:0 0 18px #ff4964; }
+.info small { color: #66dff3; letter-spacing: .2em; }
+h2 { margin: 3px 0; font-size: clamp(38px, 5vw, 60px); font-style: italic; line-height: 1; }
+h2 em { color: #62eafa; font-style: inherit; }
+.snake h2 em { color: #70f7ba; }
+.info p { margin: 8px 0 24px; color: #819aa5; font: 13px system-ui, sans-serif; }
+.game-card > b { letter-spacing: .16em; color: #dffaff; }.game-card > b span { color:#63eaff; margin-left:8px; }
+footer { display:flex; justify-content:center; align-items:center; gap:16px; margin-top:26px; color:#637781; font-size:11px; letter-spacing:.17em; }
+footer i { width:4px; height:4px; border-radius:50%; background:#4bdcf5; }
+@media (max-width: 680px) { .arcade { padding-inline: 16px; } .games { grid-template-columns: 1fr; } .game-card { min-height: 310px; } .preview { height: 115px; } footer { flex-wrap: wrap; } }

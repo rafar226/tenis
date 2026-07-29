@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#07140f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Neón Snake</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./snake.css" />
+  </head>
+  <body>
+    <main id="snakeApp">
+      <canvas id="snakeGame" aria-label="Tablero de Neón Snake"></canvas>
+      <header class="hud">
+        <button id="snakeHome" class="round" aria-label="Pausar y volver">‹</button>
+        <div class="scores"><div><small id="leftLabel">PUNTOS</small><strong id="leftScore">0</strong></div><i></i><div id="rightBox"><small id="rightLabel">RÉCORD</small><strong id="rightScore">0</strong></div></div>
+        <button id="snakePause" class="round" aria-label="Pausar">Ⅱ</button>
+      </header>
+
+      <section id="snakeMenu" class="screen visible">
+        <a class="back-link" href="./index.html">‹ TODOS LOS JUEGOS</a>
+        <div class="kicker"><span></span> ARCADE DE MESA</div>
+        <h1>NEÓN<br /><em>SNAKE</em></h1>
+        <p class="tagline">Deslizá. Crecé. Sobreviví.</p>
+        <div class="menu-actions">
+          <button class="choice main" data-snake-mode="classic"><b>1 JUGADOR</b><small>Modo clásico</small></button>
+          <button class="choice" data-snake-mode="duel"><b>2 JUGADORES</b><small>Duelo en la misma tablet</small></button>
+        </div>
+        <div class="speed-picker" role="group" aria-label="Velocidad">
+          <span>VELOCIDAD</span>
+          <button data-speed="slow">TRANQUI</button><button class="selected" data-speed="normal">NORMAL</button><button data-speed="fast">RÁPIDA</button>
+        </div>
+      </section>
+
+      <section id="snakeMessage" class="screen dialog">
+        <p id="snakeEyebrow">PARTIDA EN PAUSA</p>
+        <h2 id="snakeTitle">Pausa</h2>
+        <p id="snakeResult"></p>
+        <button id="snakeResume" class="choice main"><b>CONTINUAR</b></button>
+        <button id="snakeMenuButton" class="plain">VOLVER AL MENÚ</button>
+      </section>
+      <div id="snakeHint" class="gesture-hint">DESLIZÁ PARA GIRAR</div>
+    </main>
+    <script src="./snake.js"></script>
+  </body>
+</html>

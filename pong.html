@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#08131f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Neón Pong</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game" aria-label="Mesa de juego"></canvas>
+      <header class="topbar">
+        <button id="homeButton" class="icon-button" aria-label="Pausar y volver">‹</button>
+        <div id="score" class="score" aria-live="polite"><span>0</span><i></i><span>0</span></div>
+        <button id="pauseButton" class="icon-button" aria-label="Pausar">Ⅱ</button>
+      </header>
+      <section id="menu" class="panel visible">
+        <a class="game-link arcade-back" href="./index.html">‹ TODOS LOS JUEGOS</a>
+        <div class="brand"><span class="ball-mark"></span><p>ARCADE DE MESA</p></div>
+        <h1>NEÓN<br /><em>PONG</em></h1>
+        <p class="subtitle">Deslizá. Golpeá. Ganá.</p>
+        <div class="actions">
+          <button class="mode primary" data-mode="solo"><span>1 JUGADOR</span><small>Contra la máquina</small></button>
+          <button class="mode" data-mode="duo"><span>2 JUGADORES</span><small>En la misma tablet</small></button>
+        </div>
+        <button id="soundButton" class="sound">SONIDO: <b>ACTIVADO</b></button>
+      </section>
+      <section id="message" class="panel compact" aria-live="assertive">
+        <p id="messageEyebrow">PARTIDA EN PAUSA</p><h2 id="messageTitle">Pausa</h2>
+        <button id="resumeButton" class="mode primary"><span>CONTINUAR</span></button>
+        <button id="menuButton" class="text-button">VOLVER AL MENÚ</button>
+      </section>
+      <div id="hint" class="hint"><span>DESLIZÁ PARA MOVER</span></div>
+    </main>
+    <script src="./game.js"></script>
+  </body>
+</html>

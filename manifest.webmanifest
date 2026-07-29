@@ -1,7 +1,7 @@
 {
-  "name": "Neón Pong",
-  "short_name": "Neón Pong",
-  "description": "Tenis de mesa arcade para uno o dos jugadores.",
+  "name": "Neón Arcade",
+  "short_name": "Neón Arcade",
+  "description": "Juegos arcade para uno o dos jugadores.",
   "start_url": "./",
   "display": "fullscreen",
   "orientation": "landscape",

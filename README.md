@@ -1,6 +1,8 @@
-# Neón Pong
+# Neón Arcade
 
-Juego web táctil de tenis de mesa para tablet. Funciona sin instalar dependencias y también sin conexión después de la primera visita.
+Una colección de juegos web táctiles para tablet con una portada para elegir juego. Actualmente incluye **Neón Pong** y **Neón Snake**. Funcionan sin instalar dependencias y también sin conexión después de la primera visita.
+
+Neón Snake incluye modo clásico, duelo local para dos jugadores, tres velocidades, comida especial y récord guardado en el dispositivo.
 
 ## Probarlo localmente
 
