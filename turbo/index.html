@@ -15,15 +15,26 @@
       <header class="hud" id="hud">
         <a href="../index.html" class="round" aria-label="Volver al arcade">‹</a>
         <div class="stat"><small>VELOCIDAD</small><strong><span id="speed">0</span></strong><b>KM/H</b></div>
-        <div class="stat distance"><small>DISTANCIA</small><strong><span id="distance">0.0</span></strong><b>KM</b></div>
+        <div class="stat"><small>POSICIÓN</small><strong><span id="place">8</span><sup>/8</sup></strong></div>
+        <div class="stat distance"><small>ETAPA <span id="stage">1</span>/3</small><strong><span id="distance">0.0</span></strong><b>KM</b></div>
+        <div class="stat timer"><small>TIEMPO</small><strong><span id="timer">45</span></strong><b>SEG</b></div>
+        <button class="round sound" id="sound" aria-label="Desactivar sonido">♪</button>
         <button class="round pause" id="pause" aria-label="Pausar">Ⅱ</button>
       </header>
+      <div class="race-progress" id="raceProgress">
+        <div class="progress-label"><span>ETAPA <b id="progressStage">1</b></span><strong id="remaining">FALTAN 6.0 KM</strong></div>
+        <div class="progress-track"><i id="progressFill"></i><b style="left:33.33%"></b><b style="left:66.66%"></b><b class="finish" style="left:100%"></b></div>
+      </div>
+
+      <div class="start-lights" id="startLights" aria-live="assertive">
+        <div><i></i><i></i><i></i></div><strong id="lightText">PREPARATE</strong>
+      </div>
 
       <section class="screen visible" id="menu">
         <a href="../index.html" class="back">‹ TODOS LOS JUEGOS</a>
         <div class="kicker"><i></i> RUTA NOCTURNA</div>
         <h1>NEÓN<br /><em>TURBO</em></h1>
-        <p>Tomá las curvas. Pisá a fondo. No mires atrás.</p>
+        <p>Superá 3 etapas y 7 rivales antes de que termine el tiempo.</p>
         <button class="main" id="start">ENCENDER MOTOR <span>→</span></button>
         <small class="hint">FLECHAS / WASD · ACELERÁ Y FRENÁ</small>
       </section>
